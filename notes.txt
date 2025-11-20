@@ -1,0 +1,55 @@
+1. Need AT LEAST one real user flow calling an LLM - user pasting notes, llm generating quiz questions
+Can allow follow up, or add a quiz feature where user actively answering the questions and hearing 
+response from the LLM
+
+2. ONE enhancement - I'm using RAG
+
+Pipeline: - Verify these tools are good by prof
+I have pdf file or txt/json 
+Call langchain embedding model to embed the data
+Have langchain chroma db using as a vector store
+Vector search is done over that vector store
+
+Watch this video for help w langchain + chroma db: https://www.youtube.com/watch?v=E4l91XKQSgw&t=1300s 
+
+3. Safety/Robustness: Starter system prompt with rules, similiar to llm narrative game gm.txt
+Included in this prompt txt file should be explicit do/don't rules
+These rules including: 
+  1. a check for the length of the users input and error message if to long
+  2. prompt injection safeguard - ie user inputs "ignore all rules" and llm repsonds sorry can't do that
+
+4. "Telemetry" (Metrics): For every user request to the llm log the time of request, 
+route request took like if it used RAG getting info from vector store, or didn't.
+The Latency meaning how long llm took to respond
+Can ignore tokens/cost since using free tools
+Would need to use datetime library and write data to a csv file
+
+TESTING
+5. Have a json file with at least 15 test inputs and expected outputs, chatgpt example:
+{
+    "name": "math",
+    "input": "What is 2 + 2?",
+    "expect": ["4"]
+}
+Where each test has a name, input, and expected output. A script would read the json file
+and input the input to the llm, grab the answer from the llm, and check if its the same as
+the expected output. The script will also increment a count for each match, and print  ie.
+Pass rate: 14/15
+
+6. Prepare readme, refer to rubric
+and seed data refers to starter data I will include, my astronomy course notes
+
+Bonus (not really adds from 90-100 for project) - WORK ON LAST:
+Streaming: Meaning llm typing as it goes with loading bar instead of blank waiting screen for 30 seconds. Find resource.
+Change to pygui or tkinter instead of command line (look into best simple one)
+Loading states meaning have a loading buffer symbol looping when model thinking, tied to streaming
+Have a copy to clipboard button
+
+Non-code requirement 1 page "tech note":
+Create simple diagram overview of how the system works, just putting my above pipeline into a visual diagram (microsoft visio?)
+Guardrails means discussing the safety/robustness, what I added to the rules to keep LLM on track
+Eval method means describing my tests
+Limits - describe how i limit user inputs, how ollama model im using isn't the most advanced, 
+evaluation is a small sample of test cases, RAG causes model to go slower, etc
+
+also need a 5 minute demo video

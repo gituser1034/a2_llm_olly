@@ -33,11 +33,14 @@ TESTING
 }
 Where each test has a name, input, and expected output. A script would read the json file
 and input the input to the llm, grab the answer from the llm, and check if its the same as
-the expected output. The script will also increment a count for each match, and print  ie.
+the expected output. The script will also increment a count for each match, and print ie.
 Pass rate: 14/15
 
 6. Prepare readme, refer to rubric
 and seed data refers to starter data I will include, my astronomy course notes
+This seed part may be wrong slides say it depends on stack using seed to fix sampling, don't know that mine applies?
+Or it does so it generates same astronomy questions each time?
+Tied to sampling from slides
 
 Bonus (not really adds from 90-100 for project) - WORK ON LAST:
 Streaming: Meaning llm typing as it goes with loading bar instead of blank waiting screen for 30 seconds. Find resource.

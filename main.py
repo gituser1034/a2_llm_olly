@@ -2,6 +2,7 @@
 # Im using local llm so may have to modify slightly
 from langchain_ollama.llms import OllamaLLM
 from langchain_core.prompts import ChatPromptTemplate
+from vector import retriever
 
 model = OllamaLLM(model="qwen3:4b")
 
@@ -14,8 +15,16 @@ Here are some relevant reviews: {reviews}
 Here is the question to answer: {question}
 """
 
+# This not RAG yet, this just using ollama through langchain template
 prompt = ChatPromptTemplate.from_template(template)
 chain = prompt | model
 
-result = chain.invoke({"Reviews": [], "question": "What is the best pizza place in town?"})
-print(result)
+while True:
+    question = input("Ask your question (q to quit): ")
+    if question == "q":
+        break
+    
+    # Getting data from document store
+    reviews = retriever.invoke(question)
+    result = chain.invoke({"reviews": reviews, "question": question})
+    print(result)

@@ -11,8 +11,11 @@ pip install ollama
 pip install langchain langchain-ollama langchain-chroma
 ollama pull mxbai-embed-large
 pip install pandas
+pip install langchain-community
+pip install pypdf
 
-Run:
-python main.py
+Run - can change to only using main later:
+To embed: python vector.py
+To run post-embedding: python main.py
 
 

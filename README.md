@@ -13,6 +13,7 @@ ollama pull mxbai-embed-large
 pip install pandas
 pip install langchain-community
 pip install pypdf
+pip install langchain-text-splitters
 
 Run - can change to only using main later:
 To embed: python vector.py

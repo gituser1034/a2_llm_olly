@@ -10,7 +10,6 @@ loader = PyPDFLoader("AstroSeasons.pdf")
 # Gives long list of all text from pdf including /n for newlines
 # Has metadata saying producer - microsoft and page number, page_content stores text per page
 pdf_docs = loader.load()
-print(pdf_docs)
 
 # Splitting data into smaller chunks for easier embedding
 splitter = RecursiveCharacterTextSplitter(

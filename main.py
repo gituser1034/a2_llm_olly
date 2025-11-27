@@ -6,12 +6,14 @@ from vectorpdf import retriever
 
 system_prompt_path = 'prompts/prompt.txt'
 
-# Retrieval very slow
-# Change pipeline so that llm goes into document, generates 15 questions
-# and answers - this will be seeded so its the 
-# same set of 15 each time for later evaluation
-# then user will respond and llm will evaluate that response based on 
-# the already known answers - it refers to its answer list for the certain index and re-explains
+# Need to find easier subject for quiz
+
+# Retrieval very slow - new pipeline
+# LLM goes into document, generates 15 questions
+# These questions get stored in a list and each iteration will be read to the user
+# user will type in an answer, and model will use RAG again to retrieve answer from the document and 
+# give a 1 or 0 grade, this will be grabbed from the output to give the user a final grade
+
 
 # Getting system prompt
 # with open(system_prompt_path, 'r', encoding='utf-8') as file:
@@ -20,8 +22,8 @@ system_prompt_path = 'prompts/prompt.txt'
 # Potential issue with seed generating same question each time, may need to 
 # have seed as a variable and increment each time in loop??
 model = OllamaLLM(
-    model="qwen3:4b",
-    #seed=1
+  model="qwen3:4b",
+  #seed=1
 )
 
 question_prompt_path = 'prompts/q_prompt.txt'
@@ -62,39 +64,67 @@ print("Welcome to the Ollama LLM Astronomy Quiz.")
 # Tracking quiz rounds - will I use this?
 i = 0
 
-while True:
-    # Retrieves notes to use in generation
-    astro_notes = retriever.invoke("Ask an astronomy question")
-    output = chain.invoke({"astro_notes": astro_notes})
-    print(output)
+questions = []
 
-    print("---------------------------")
+# Retrieves notes to use in generation
+astro_notes = retriever.invoke("Ask astronomy questions")
+output = chain.invoke({"astro_notes": astro_notes})
+print(output)
+print("---------------------------")
 
-    student_answer = input("Answer the question (q to quit): ")
+# Want to split output on newline and ignore index 0
+questions = output.split("\n")
 
-    if student_answer == "q":
-      break
+for i in range(len(questions)):
+  print(questions[i])
+  print("---------------------------")
 
-    astro_notes = retriever.invoke(student_answer)
-    output = chain2.invoke({"astro_notes": astro_notes, "student_answer": student_answer})
-    print(output)
+  student_answer = input("Answer the question (q to quit): ")
 
-    print("---------------------------")
+  if student_answer == "q":
+    break
 
-    #i+=1
+  astro_notes = retriever.invoke(student_answer)
+  output = chain2.invoke({"astro_notes": astro_notes, "student_answer": student_answer})
+  print(output)
+
+  print("---------------------------")
+
+# while True:
+
+#     # Outputs like:
+#     # Welcome to the Ollama LLM Astronomy Quiz.
+#     # 1. What is the key difference between a sidereal day and a solar day?  
+#     # 2. Why do astronomers prefer using sidereal days for calculations?  
+#     # 3. What does apparent solar time depend on for its measurement?  
+
+#     print("---------------------------")
+
+#     student_answer = input("Answer the question (q to quit): ")
+
+#     if student_answer == "q":
+#       break
+
+#     # astro_notes = retriever.invoke(student_answer)
+#     # output = chain2.invoke({"astro_notes": astro_notes, "student_answer": student_answer})
+#     # print(output)
+
+#     print("---------------------------")
+
+#     #i+=1
     
-    # Searches through vector store to generate a question
-    # q_data = retriever.invoke("Generate an astronomy quiz question")
+#     # Searches through vector store to generate a question
+#     # q_data = retriever.invoke("Generate an astronomy quiz question")
 
-    # # Generating question based on retrieved data
-    # q = chain.invoke({"q_data": q_data})
-    # print("Question: ", q)
+#     # # Generating question based on retrieved data
+#     # q = chain.invoke({"q_data": q_data})
+#     # print("Question: ", q)
 
-    # # Need question generated first
-    # user_input = input("Respond (q to quit): ")
-    # if user_input == "q":
-    #     break
+#     # # Need question generated first
+#     # user_input = input("Respond (q to quit): ")
+#     # if user_input == "q":
+#     #     break
 
-    # answer = retriever.invoke(user_input)
-    # result = chain2.invoke({"answer": answer, "user_input": user_input})
-    # print(result)
+#     # answer = retriever.invoke(user_input)
+#     # result = chain2.invoke({"answer": answer, "user_input": user_input})
+#     # print(result)

@@ -1,0 +1,65 @@
+2025-12-02 16:11:33.531553: RAG retrieval underway - accessing AstroNotes.pdf chroma_langchain_db vector store
+2025-12-02 16:12:53.706027: RAG data retrieval successful
+Model: 
+Q1. The solar system is approximately 4.6 billion years old.  
+A1. True - the notes state "Solar system around 4.6 billion years old".  
+
+Q2. Galaxies typically form disc-shaped structures.  
+A2. True - the notes specify "Galaxies like discs".  
+
+Q3. Rock can remain solid at higher temperatures than ice.  
+A3. True - the notes indicate "Rock can be solid much higher temp then ice".  
+
+Q4. Angular momentum increases as a collapsing gas cloud spins faster.  
+A4. True - the notes explain "Rotation increased, increase of angular momentum, as cloud collapses".  
+
+Q5. Stars form through the collapse of isolated gas clouds in space.  
+A5. False - the notes state "Gas clouds collapsing, big gas clouds collapse into numerous stars", meaning stars form from collapsing clouds, not isolation.  
+
+Q6. Planets in our solar system formed from the same gas and dust cloud as the Sun.  
+A6. True - the notes confirm "shared origin, planets formed together, at the same time" from the solar nebula.  
+
+Q7. The inner regions of the solar system are dominated by gas and ice.  
+A7. False - the notes state "rock in hot area, gas and ice in outer solar system", meaning gas/ice are outer regions.  
+
+Q8. Stellar life cycles involve "galactic recycling" where dead stars fuel new star formation.  
+A8. True - the notes describe "Galactic recycling, Stars form, blows up fueling more stars".  
+
+Q9. Conservation of energy causes the center of a collapsing cloud to become hotter.  
+A9. True - the notes mention "Conservation of energy, gravity causing contraction, hot, inner hotter then outer".  
+
+Q10. All stars form independently without interacting with other stars.  
+A10. False - the notes indicate "big gas clouds collapse into numerous stars, get star clusters", showing star formation in groups.  
+
+Q11. The solar system formed after the Big Bang.  
+A11. False - the notes provide an age ("4.6 billion years old") but do not reference the Big Bang timeline, so this is not supported by the given material.  
+
+Q12. Angular momentum conservation flattens collapsing gas clouds into discs.  
+A12. True - the notes state "as cloud collapsing, spins more, flattens to disc shape (aka circumstellar disc)".  
+
+Q13. New stars form at a rate of one per year in the Milky Way.  
+A13. False - the notes mention "New star born a year" but this is likely a misstatement; the context implies star formation occurs continuously, not exactly one per year.  
+
+Q14. Planets form after their host stars have already completed their life cycles.  
+A14. False - the notes state "planets formed together, at the same time" with the Sun, meaning simultaneous formation.  
+
+Q15. Observing other planetary systems helps understand our solar system's formation.  
+A15. True - the notes confirm "Can watch how other planets form from other solar nebulas and use that to tell how our solar system formed".
+RAG Latency: 80.17443895339966
+2025-12-02 16:12:53.706079: Caching data.
+2025-12-02 16:12:53.706146: Data cached.
+Caching Latency: 6.794929504394531e-05
+2025-12-02 16:12:53.706673: Cached question output: Q1. The solar system is approximately 4.6 billion years old.
+2025-12-02 16:13:04.723737: Student: True
+2025-12-02 16:13:04.723788: Local cache retrieval underway.
+2025-12-02 16:15:03.343352: Cached data retrieval successful
+2025-12-02 16:15:03.343377: Model: Grade: 1 - The student gets this because the solar system is approximately 4.6 billion years old.
+Cumulative: 1/15
+Cache retrieval latency: 118.619544267654422025-12-02 16:15:03.344614: Cached question output: Q2. Galaxies typically form disc-shaped structures.
+2025-12-02 16:15:14.427928: Student: False
+2025-12-02 16:15:14.427976: Local cache retrieval underway.
+2025-12-02 16:18:07.043244: Cached data retrieval successful
+2025-12-02 16:18:07.043286: Model: Grade: 0 - The student's answer of False is incorrect because the correct answer is True: galaxies typically form disc-shaped structures (such as spiral and elliptical galaxies).  
+Cumulative: 0/1
+Cache retrieval latency: 172.61524248123172025-12-02 16:18:07.044740: Cached question output: Q3. Rock can remain solid at higher temperatures than ice.
+2025-12-02 16:18:24.092709: Student: q

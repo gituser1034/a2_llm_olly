@@ -3,8 +3,8 @@ A great way to help students study is to test their knowledge by giving them a q
 You have already given them a quiz question, they have answered. Now you will grade that question.
 You know what the students answer should have been based on your astronomy notes: {astro_notes}
 Here was the students answer: {student_answer} 
-Give the student a 1 for correct, a 0 for incorrect, and a short 1 sentence explanation for
-why you gave them the answer you did.
-In addition, show the student their cumulative score in the form - Score: x/15 where x is there grade
-After all, they are being asked 15 questions in total, that information is important to them.
-AND REMEMBER, YOU ARE GRADING 1 ANSWER AT A TIME, 1 GRADE PER CALL!
+Give the student a 1 for correct, a 0 for incorrect, and a short 1 sentence explanation for the grade
+Also show them there cumulative grade
+ex. format: 
+Grade: 1 - The student gets this because...
+Cumulative: 1/15

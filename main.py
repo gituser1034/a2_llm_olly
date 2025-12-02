@@ -6,13 +6,16 @@ from vectorpdf import retriever
 
 system_prompt_path = 'prompts/prompt.txt'
 
-# Need to find easier subject for quiz
-
 # Retrieval very slow - new pipeline
 # LLM goes into document, generates 15 questions
 # These questions get stored in a list and each iteration will be read to the user
 # user will type in an answer, and model will use RAG again to retrieve answer from the document and 
 # give a 1 or 0 grade, this will be grabbed from the output to give the user a final grade
+
+# Seeding not working, will need to change how this works
+# Have document of questions that model grabs from, reads in, and asks?
+# For reproducibility and output checking
+# or change from study budy to me quizzing the model
 
 
 # Getting system prompt
@@ -23,7 +26,7 @@ system_prompt_path = 'prompts/prompt.txt'
 # have seed as a variable and increment each time in loop??
 model = OllamaLLM(
   model="qwen3:4b",
-  #seed=1
+  options={"seed": 42}
 )
 
 question_prompt_path = 'prompts/q_prompt.txt'

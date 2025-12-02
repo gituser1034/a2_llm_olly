@@ -6,14 +6,14 @@ from langchain_text_splitters import RecursiveCharacterTextSplitter
 import os
 import pandas as pd
 
-loader = PyPDFLoader("AstroSeasons.pdf")
+loader = PyPDFLoader("AstroNotes.pdf")
 # Gives long list of all text from pdf including /n for newlines
 # Has metadata saying producer - microsoft and page number, page_content stores text per page
 pdf_docs = loader.load()
 
 # Splitting data into smaller chunks for easier embedding
 splitter = RecursiveCharacterTextSplitter(
-    chunk_size=300,
+    chunk_size=600,
     chunk_overlap=100
 )
 
@@ -39,5 +39,5 @@ if add_documents:
 # looking up documents - here looking up 3 most relevant data chunks
 # This gets passed into prompt for llm later
 retriever = vector_store.as_retriever(
-    search_kwargs={"k": 3}
+    search_kwargs={"k": 2}
 )

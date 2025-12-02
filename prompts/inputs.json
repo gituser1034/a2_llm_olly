@@ -1,0 +1,87 @@
+{
+    "T1":{
+        "question": "Q1. The solar system is approximately 4.6 billion years old.",
+        "input": "True",
+        "expected": "Grade: 1"
+    },
+    "T2":{
+        "question": "Q2. Galaxies typically form disc-shaped structures.",
+        "input": "False",
+        "expected": "Grade: 1"
+    },
+    "T3":{
+        "question": "Q3. Rock can remain solid at higher temperatures than ice.",
+        "input": "True",
+        "expected": "Grade: 1"
+    },
+    "T4":{
+        "question": "Q4. Angular momentum increases as a collapsing gas cloud spins faster.",
+        "input": "False",
+        "expected": "Grade: 0"
+    },
+    "T5":{
+        "question": "Q5. Stars form through the collapse of isolated gas clouds in space.",
+        "input": "I don't know",
+        "expected": "Grade: 0"
+    },
+    "T6":{
+        "question": "Q6. Planets in our solar system formed from the same gas and dust cloud as the Sun.",
+        "input": "False",
+        "expected": "Grade: 0"
+    },
+    "T7":{
+        "question": "Q7. The inner regions of the solar system are dominated by gas and ice.  ",
+        "input": "True",
+        "expected": "Grade: 0"
+    },
+    "T8":{
+        "question": "Q8. Stellar life cycles involve galactic recycling where dead stars fuel new star formation.",
+        "input": "True",
+        "expected": "Grade: 1"
+    },
+    "T9":{
+        "question": "Q9. Conservation of energy causes the center of a collapsing cloud to become hotter.",
+        "input": "True",
+        "expected": "Grade: 1"
+    },
+    "T10":{
+        "question": "Q10. All stars form independently without interacting with other stars.",
+        "input": "True",
+        "expected": "Grade: 0"
+    },
+    "T11":{
+        "question": "Q11. The solar system formed after the Big Bang.",
+        "input": "True",
+        "expected": "Grade: 1"
+    },
+    "T12":{
+        "question": "Q12. Angular momentum conservation flattens collapsing gas clouds into discs.",
+        "input": "True",
+        "expected": "Grade: 1"
+    },
+    "T13":{
+        "question": "Q13. New stars form at a rate of one per year in the Milky Way. ",
+        "input": "False",
+        "expected": "Grade: 1"
+    },
+    "T14":{
+        "question": "Q14. Planets form after their host stars have already completed their life cycles.",
+        "input": "False",
+        "expected": "Grade: 1"
+    },
+    "T15":{
+        "question": "Q15. Observing other planetary systems helps understand our solar system's formation.",
+        "input": "True",
+        "expected": "Grade: 1"
+    },
+    "T16":{
+        "question": "Testing user input when quiz is over",
+        "input": "True",
+        "expected": "over"
+    },
+    "T17":{
+        "question": "Ending tests",
+        "input": "q",
+        "expected": ""
+    }
+}

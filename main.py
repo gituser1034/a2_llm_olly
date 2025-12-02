@@ -6,16 +6,23 @@ from vectorpdf import retriever
 
 system_prompt_path = 'prompts/prompt.txt'
 
-# Retrieval very slow - new pipeline
-# LLM goes into document, generates 15 questions
-# These questions get stored in a list and each iteration will be read to the user
-# user will type in an answer, and model will use RAG again to retrieve answer from the document and 
-# give a 1 or 0 grade, this will be grabbed from the output to give the user a final grade
+# FINISHED THIS PART - Test
+# Better idea for reducing speed of RAG - NEED TO IMPLEMENT
+# model uses RAG to generate 15 questions and answers, questions stored in list like
+# current and output 1 by 1 from the list, answers are stored in some text string
+# like answer then newline the model has access to, a "local cache", 
+# So when user asks model question, it responds with context from local cache
+# May do a true or false test for easy answer equating in test
 
-# Seeding not working, will need to change how this works
-# Have document of questions that model grabs from, reads in, and asks?
-# For reproducibility and output checking
-# or change from study budy to me quizzing the model
+# How to test
+# Offline testing - Im not testing the whole flow, just the grading part
+# I have a test file thats like this but slightly modified
+# I provide the model the questions all at once, 15 inputs with answers
+# It uses RAG going through document, it generates all answers at once
+# i split them and store in a list, 1 answer per line
+# I equate these to the expected answers 
+# JUST JUDGING HOW IT USES RAG TO GRADE! NOT WHOLE FLOW! IN README EXPLAIN WHY THAT WOULD 
+# BE IMPOSSIBLE!
 
 
 # Getting system prompt
@@ -68,15 +75,25 @@ print("Welcome to the Ollama LLM Astronomy Quiz.")
 i = 0
 
 questions = []
+results = []
+models_answers = ""
 
 # Retrieves notes to use in generation
-astro_notes = retriever.invoke("Ask astronomy questions")
+astro_notes = retriever.invoke("Ask astronomy questions and provide answers")
 output = chain.invoke({"astro_notes": astro_notes})
 print(output)
 print("---------------------------")
 
-# Want to split output on newline and ignore index 0
-questions = output.split("\n")
+results = output.split("\n")
+
+# accessing first index and checking whether its Q or A
+# to seperately store questions and answers
+for i in range(len(results)):
+  # Checking first char in the line
+  if results[i][0] == "Q":
+    questions.append(results[i])
+  elif results[i][0] == "A":
+    models_answers += (results[i] + "\n")
 
 for i in range(len(questions)):
   print(questions[i])
@@ -87,9 +104,14 @@ for i in range(len(questions)):
   if student_answer == "q":
     break
 
-  astro_notes = retriever.invoke(student_answer)
-  output = chain2.invoke({"astro_notes": astro_notes, "student_answer": student_answer})
+  # What do i pass here
+  output = chain2.invoke("Evaluate the students answer")
   print(output)
+
+  # Want to replace this rag with regular chatbot loop
+  # astro_notes = retriever.invoke(student_answer)
+  # output = chain2.invoke({"astro_notes": astro_notes, "student_answer": student_answer})
+  # print(output)
 
   print("---------------------------")
 

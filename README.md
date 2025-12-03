@@ -1,6 +1,6 @@
 # a2_llm_olly
 Olly Love
-Ollama + Python LLM Study Buddy
+Ollama + Python LLM Astronomy Study Buddy
 
 Overview: An Ai-engineering application using a local Ollama model with Langchain and Chroma DB. 
 RAG from a small pdf set generates a True/False quiz to help me study for my upcoming Astronomy exam.

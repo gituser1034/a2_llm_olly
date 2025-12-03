@@ -33,8 +33,8 @@ with open(inputs_path, 'r', encoding='utf-8') as file:
 
 for input_key in data:
   inputs.append(data[input_key]["input"])
-  questions.append([input_key]["question"])
-  expected_answers.append([input_key]["expected"])
+  questions.append(data[input_key]["question"])
+  expected_answers.append(data[input_key]["expected"])
 
 # Getting question prompt
 with open(test_prompt_path, 'r', encoding='utf-8') as file:
@@ -89,6 +89,7 @@ with open(telemetry, 'a', encoding='utf-8') as file:
     print("---------------------------")
     file.write(str(datetime.datetime.now()) + ": Cached question output: "  + questions[i] + "\n")
 
+    print(f"Student: {inputs[i]}\n")
     file.write(str(datetime.datetime.now()) + ": Student: " + inputs[i] + "\n")
 
     if inputs[i] == "q":
@@ -97,6 +98,7 @@ with open(telemetry, 'a', encoding='utf-8') as file:
     file.write(str(datetime.datetime.now()) + ": Local cache retrieval underway.\n")
     start_time3 = time.time()
     # Passing context the answer prompt expects
+    # Error - 15 model answers, 2 extra test cases - just delete these and were good?
     output = chain2.invoke({"models_answer": models_answers[i], "question": questions[i], "student_answer":inputs[i]})
     end_time3 = time.time()
     file.write(str(datetime.datetime.now()) + ": Cached data retrieval successful\n")

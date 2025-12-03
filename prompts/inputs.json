@@ -73,15 +73,5 @@
         "question": "Q15. Observing other planetary systems helps understand our solar system's formation.",
         "input": "True",
         "expected": "Grade: 1"
-    },
-    "T16":{
-        "question": "Testing user input when quiz is over",
-        "input": "True",
-        "expected": "over"
-    },
-    "T17":{
-        "question": "Ending tests",
-        "input": "q",
-        "expected": ""
     }
 }

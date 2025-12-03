@@ -1,0 +1,106 @@
+2025-12-02 19:03:18.795704: RAG retrieval underway - accessing AstroNotes.pdf chroma_langchain_db vector store
+2025-12-02 19:06:53.317161: RAG data retrieval successful
+RAG Latency: 214.52142572402954
+2025-12-02 19:06:53.317253: Caching data.
+2025-12-02 19:06:53.317435: Data cached.
+Caching Latency: 0.00018644332885742188
+2025-12-02 19:06:53.317990: Cached question output: Q1. The solar system is approximately 4.6 billion years old.
+2025-12-02 19:06:53.318492: Student: True
+2025-12-02 19:06:53.318514: Local cache retrieval underway.
+2025-12-02 19:09:03.786911: Cached data retrieval successful
+2025-12-02 19:09:03.786942: Model: Grade: 1 - This is correct because the solar system is approximately 4.6 billion years old.
+Cumulative: 1/15
+Cache retrieval latency: 130.46838164329532025-12-02 19:09:03.788330: Cached question output: Q2. Galaxies typically form disc-shaped structures.
+2025-12-02 19:09:03.788766: Student: False
+2025-12-02 19:09:03.788793: Local cache retrieval underway.
+2025-12-02 19:12:25.758106: Cached data retrieval successful
+2025-12-02 19:12:25.758139: Model: Grade: 0 - The student answered False but the correct answer is True.  
+Cumulative: 0/15
+Cache retrieval latency: 201.969297170639042025-12-02 19:12:25.759588: Cached question output: Q3. Rock can remain solid at higher temperatures than ice.
+2025-12-02 19:12:25.760211: Student: True
+2025-12-02 19:12:25.760233: Local cache retrieval underway.
+2025-12-02 19:15:53.268261: Cached data retrieval successful
+2025-12-02 19:15:53.268291: Model: Grade: 1 - The student gets this because rocks have a melting point much higher than ice, so they can remain solid at higher temperatures than ice.
+
+Cumulative: 1/15
+Cache retrieval latency: 207.50801205635072025-12-02 19:15:53.269839: Cached question output: Q4. Angular momentum increases as a collapsing gas cloud spins faster.
+2025-12-02 19:15:53.270336: Student: False
+2025-12-02 19:15:53.270358: Local cache retrieval underway.
+2025-12-02 19:19:35.225931: Cached data retrieval successful
+2025-12-02 19:19:35.225970: Model: This is correct because angular momentum is conserved.  
+Cumulative: 4/15
+Cache retrieval latency: 221.955560445785522025-12-02 19:19:35.227280: Cached question output: Q5. Stars form through the collapse of isolated gas clouds in space.
+2025-12-02 19:19:35.227728: Student: I don't know
+2025-12-02 19:19:35.227750: Local cache retrieval underway.
+2025-12-02 19:22:56.238588: Cached data retrieval successful
+2025-12-02 19:22:56.238613: Model: Grade: 0 - incorrect input  
+Cumulative: 0/5
+Cache retrieval latency: 201.01082086563112025-12-02 19:22:56.240028: Cached question output: Q6. Planets in our solar system formed from the same gas and dust cloud as the Sun.
+2025-12-02 19:22:56.240441: Student: False
+2025-12-02 19:22:56.240462: Local cache retrieval underway.
+2025-12-02 19:25:53.926313: Cached data retrieval successful
+2025-12-02 19:25:53.926353: Model: Grade: 0 - The student answered False, but the correct answer is True.  
+Cumulative: 3/6
+Cache retrieval latency: 177.685835123062132025-12-02 19:25:53.927748: Cached question output: Q7. The inner regions of the solar system are dominated by gas and ice.  
+2025-12-02 19:25:53.928122: Student: True
+2025-12-02 19:25:53.928144: Local cache retrieval underway.
+2025-12-02 19:28:52.340009: Cached data retrieval successful
+2025-12-02 19:28:52.340032: Model: Grade: 0 - The inner solar system is rocky, not gaseous, so the statement that the inner regions are dominated by gas and ice is false.  
+Cumulative: 5/15
+Cache retrieval latency: 178.41185140609742025-12-02 19:28:52.341405: Cached question output: Q8. Stellar life cycles involve galactic recycling where dead stars fuel new star formation.
+2025-12-02 19:28:52.341850: Student: True
+2025-12-02 19:28:52.341871: Local cache retrieval underway.
+2025-12-02 19:32:23.343862: Cached data retrieval successful
+2025-12-02 19:32:23.343894: Model: Grade: 1 - The student gets this because stellar life cycles do involve galactic recycling where dead stars fuel new star formation.  
+Cumulative: 8/15
+Cache retrieval latency: 211.001976251602172025-12-02 19:32:23.345034: Cached question output: Q9. Conservation of energy causes the center of a collapsing cloud to become hotter.
+2025-12-02 19:32:23.345412: Student: True
+2025-12-02 19:32:23.345441: Local cache retrieval underway.
+2025-12-02 19:35:40.420166: Cached data retrieval successful
+2025-12-02 19:35:40.420205: Model: Grade: 1 - The student gets this because conservation of energy in collapsing clouds converts gravitational potential energy to heat, which causes the center to become hotter.  
+Cumulative: 9/15
+Cache retrieval latency: 197.074709653854372025-12-02 19:35:40.421761: Cached question output: Q10. All stars form independently without interacting with other stars.
+2025-12-02 19:35:40.422323: Student: True
+2025-12-02 19:35:40.422345: Local cache retrieval underway.
+2025-12-02 19:39:16.670472: Cached data retrieval successful
+2025-12-02 19:39:16.670500: Model: Grade: 0 - The student answered True, but the correct answer is False for this question.  
+Cumulative: 5/15
+Cache retrieval latency: 216.248111486434942025-12-02 19:39:16.671706: Cached question output: Q11. The solar system formed after the Big Bang.
+2025-12-02 19:39:16.672111: Student: True
+2025-12-02 19:39:16.672138: Local cache retrieval underway.
+2025-12-02 19:42:45.494280: Cached data retrieval successful
+2025-12-02 19:42:45.494318: Model: Grade: 1 - The student gets this because the solar system formed after the Big Bang.  
+Cumulative: 1/15
+Cache retrieval latency: 208.822123289108282025-12-02 19:42:45.495343: Cached question output: Q12. Angular momentum conservation flattens collapsing gas clouds into discs.
+2025-12-02 19:42:45.495769: Student: True
+2025-12-02 19:42:45.495790: Local cache retrieval underway.
+2025-12-02 19:46:16.270334: Cached data retrieval successful
+2025-12-02 19:46:16.270358: Model: Grade: 1 - The student gets this because angular momentum conservation flattens collapsing gas clouds into discs.
+Cumulative: 1/1
+Cache retrieval latency: 210.774531126022342025-12-02 19:46:16.271385: Cached question output: Q13. New stars form at a rate of one per year in the Milky Way. 
+2025-12-02 19:46:16.271878: Student: False
+2025-12-02 19:46:16.271899: Local cache retrieval underway.
+2025-12-02 19:50:04.767357: Cached data retrieval successful
+2025-12-02 19:50:04.767380: Model: The student correctly identified that the Milky Way forms stars at a rate of 1-3 per year.  
+Cumulative: 13/15
+Cache retrieval latency: 228.495445251464842025-12-02 19:50:04.768733: Cached question output: Q14. Planets form after their host stars have already completed their life cycles.
+2025-12-02 19:50:04.769161: Student: False
+2025-12-02 19:50:04.769182: Local cache retrieval underway.
+2025-12-02 19:53:50.742878: Cached data retrieval successful
+2025-12-02 19:53:50.742904: Model: The student correctly answered the question by selecting "False" (as the correct answer for the statement is indeed "False"). 
+
+**Grade:** 1 - The student gets this because the correct answer is False and the student chose False.  
+**Cumulative:** 14/14  
+
+*(Note: The cumulative grade shows 14 correct answers out of 14 questions answered, indicating the student has achieved perfect accuracy for all questions up to this point.)*
+Cache retrieval latency: 225.973681211471562025-12-02 19:53:50.744488: Cached question output: Q15. Observing other planetary systems helps understand our solar system's formation.
+2025-12-02 19:53:50.744987: Student: True
+2025-12-02 19:53:50.745009: Local cache retrieval underway.
+2025-12-02 19:57:14.178792: Cached data retrieval successful
+2025-12-02 19:57:14.178875: Model: Grade: 1 - The student gets this because observing other planetary systems provides context for how our solar system formed, helping us understand the processes that occurred during its early stages.  
+Cumulative: 15/15
+Cache retrieval latency: 203.433766365051272025-12-02 19:57:14.180424: Cached question output: Testing user input when quiz is over
+2025-12-02 19:57:14.180880: Student: True
+2025-12-02 19:57:14.181223: Local cache retrieval underway.
+The models accuracy is: 11/15
+The model is not able to accurately grade a student.

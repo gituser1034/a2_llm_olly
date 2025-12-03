@@ -2,6 +2,11 @@
 Olly Love
 Ollama + Python LLM Study Buddy
 
+Overview: An Ai-engineering application using a local Ollama model with Langchain and Chroma DB. 
+RAG from a small pdf set generates a True/False quiz to help me study for my upcoming Astronomy exam.
+RAG done once at the start and information loaded into local cache lists to speed up.
+Model consistently refers to local caches to grade a students answer.
+
 How to run:
 Install Ollama on Windows + pull model qwen3:4b, create venv (python -m venv venv)
 Run venv: venv\Scripts\activate
@@ -16,7 +21,14 @@ pip install pypdf
 pip install langchain-text-splitters
 
 Run - can change to only using main later:
-To embed: python vector.py
-To run post-embedding: python main.py
+To embed: python vector.py (NOTE - I ALREADY RAN THIS SO THE VECTOR STORE ALREADY EXISTS, NO NEED TO RERUN)
+To run: python main.py
+To run input tests: python test_main.py
+
+Testing Note:
+It is impossible to predetermine what questions the llm will ask, so I 
+took questions from one run, and to test inputs I created a seperate document not
+generating the questions through RAG, to seed the generated questions. RAG is used for answer generation
+only in that file.
 
 

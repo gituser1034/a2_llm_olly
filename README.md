@@ -12,6 +12,7 @@ Install Ollama on Windows + pull model qwen3:4b, create venv (python -m venv ven
 Run venv: venv\Scripts\activate
 
 Install these in the active venv:
+```
 pip install ollama 
 pip install langchain langchain-ollama langchain-chroma
 ollama pull mxbai-embed-large
@@ -19,11 +20,14 @@ pip install pandas
 pip install langchain-community
 pip install pypdf
 pip install langchain-text-splitters
+```
 
-Run - can change to only using main later:
+Run (Note: I already ran the vector store, no need to rerun that file):
+```
 To embed: python vector.py (NOTE - I ALREADY RAN THIS SO THE VECTOR STORE ALREADY EXISTS, NO NEED TO RERUN)
 To run: python main.py
 To run input tests: python test_main.py
+```
 
 Testing Note:
 It is impossible to predetermine what questions the llm will ask, so I 

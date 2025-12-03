@@ -63,3 +63,71 @@ Cache retrieval latency: 118.619544267654422025-12-02 16:15:03.344614: Cached qu
 Cumulative: 0/1
 Cache retrieval latency: 172.61524248123172025-12-02 16:18:07.044740: Cached question output: Q3. Rock can remain solid at higher temperatures than ice.
 2025-12-02 16:18:24.092709: Student: q
+2025-12-02 21:12:34.137522: RAG retrieval underway - accessing AstroNotes.pdf chroma_langchain_db vector store
+2025-12-02 21:14:08.103728: RAG data retrieval successful
+Model:
+Q1. Stars form from collapsing gas clouds due to gravity.  
+A1. True - gravity causes gas clouds to collapse into stars.  
+
+Q2. As a gas cloud collapses, its rotation speed decreases.  
+A2. False - conservation of angular momentum increases rotation speed during collapse.  
+
+Q3. The solar system formed approximately 4.6 billion years ago.  
+A3. True - the solar system is about 4.6 billion years old.  
+
+Q4. Planets in our solar system formed at the same time from the same material.  
+A4. True - planets formed together from the solar nebula.  
+
+Q5. Galactic recycling involves stars exploding to fuel the formation of new stars.  
+A5. True - stars blow up, releasing material that fuels subsequent star formation.  
+
+Q6. The inner regions of a collapsing gas cloud are hotter than the outer regions.  
+A6. True - gravitational contraction heats the inner parts more than the outer.  
+
+Q7. Ice can exist at higher temperatures than rock in the solar system.  
+A7. False - rock solidifies at much higher temperatures than ice, so rock forms closer to the sun.  
+
+Q8. Star nurseries are regions where new stars form from collapsing gas clouds.  
+A8. True - star nurseries (nebulas) are sites of active star formation.  
+
+Q9. Galaxies typically have a spherical shape due to gravitational collapse.  
+A9. False - galaxies form disc-like structures as angular momentum flattens collapsing clouds.  
+
+Q10. The solar system is the only known system with planets forming from a nebula.  
+A10. False - hundreds of exoplanets orbiting other stars confirm nebular formation elsewhere.  
+
+Q11. Angular momentum determines how fast an object spins.  
+A11. True - angular momentum directly relates to rotational speed.  
+
+Q12. All stars form in clusters without any disc structures.  
+A12. False - collapsing gas clouds flatten into discs (circumstellar discs) before star formation.  
+
+Q13. The outer solar system contains primarily solid rock material.  
+A13. False - the outer solar system has gas and ice, not solid rock.  
+
+Q14. Galactic recycling stops after a star completes its life cycle.  
+A14. False - galactic recycling is continuous, with star deaths fueling new star formation.
+RAG Latency: 93.96617865562439
+2025-12-02 21:14:08.103775: Caching data.
+2025-12-02 21:14:08.103842: Data cached.
+Caching Latency: 6.723403930664062e-05
+2025-12-02 21:14:08.104344: Cached question output: Q1. Stars form from collapsing gas clouds due to gravity.
+2025-12-02 21:14:21.942127: Student: True
+2025-12-02 21:14:21.942191: Local cache retrieval underway.
+2025-12-02 21:18:50.129561: Cached data retrieval successful
+2025-12-02 21:18:50.129605: Model: Grade: 1 - The student gets this because gravity causes gas clouds to collapse into stars.  
+Cumulative: 1/15
+Cache retrieval latency: 268.1873402595522025-12-02 21:18:50.130769: Cached question output: Q2. As a gas cloud collapses, its rotation speed decreases.
+2025-12-02 21:19:26.653036: Student: False
+2025-12-02 21:19:26.653101: Local cache retrieval underway.
+2025-12-02 21:23:55.711545: Cached data retrieval successful
+2025-12-02 21:23:55.711595: Model: Grade: 1 - The student gets this because the rotation speed increases during collapse due to conservation of angular momentum, making the statement that it decreases false.  
+Cumulative: 1/2
+Cache retrieval latency: 269.058409690856932025-12-02 21:23:55.712447: Cached question output: Q3. The solar system formed approximately 4.6 billion years ago.
+2025-12-02 21:24:34.443467: Student: True 
+2025-12-02 21:24:34.443535: Local cache retrieval underway.
+2025-12-02 21:29:12.640680: Cached data retrieval successful
+2025-12-02 21:29:12.640725: Model: Grade: 1 - This is correct because the solar system formed approximately 4.6 billion years ago.  
+Cumulative: 3/15
+Cache retrieval latency: 278.19712734222412025-12-02 21:29:12.641845: Cached question output: Q4. Planets in our solar system formed at the same time from the same material.
+2025-12-02 21:29:49.866871: Student: q

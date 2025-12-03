@@ -36,7 +36,6 @@ To run input tests: python test_main.py
 Testing Note:
 It is impossible to predetermine what questions the llm will ask, so I 
 took questions from one run, and to test inputs I created a seperate document not
-generating the questions through RAG, to seed the generated questions. RAG is used for answer generation
-only in that file.
+generating the questions through RAG, to seed the generated questions.
 
 

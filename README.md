@@ -8,8 +8,11 @@ RAG done once at the start and information loaded into local cache lists to spee
 Model consistently refers to local caches to grade a students answer.
 
 How to run:
-Install Ollama on Windows + pull model qwen3:4b, create venv (python -m venv venv)
+Install Ollama on Windows + pull model qwen3:4b
+```
+create venv (python -m venv venv)
 Run venv: venv\Scripts\activate
+```
 
 Install these in the active venv:
 ```
@@ -24,7 +27,7 @@ pip install langchain-text-splitters
 
 Run (Note: I already ran the vector store, no need to rerun that file):
 ```
-To embed: python vector.py (NOTE - I ALREADY RAN THIS SO THE VECTOR STORE ALREADY EXISTS, NO NEED TO RERUN)
+To embed: python vector.py
 To run: python main.py
 To run input tests: python test_main.py
 ```

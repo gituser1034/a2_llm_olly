@@ -27,7 +27,7 @@ pip install langchain-text-splitters
 
 Run (Note: I already ran the vector store, no need to rerun that file):
 ```
-To embed: python vector.py
+To embed: python vectorpdf.py
 To run: python main.py
 To run input tests: python test_main.py
 ```
